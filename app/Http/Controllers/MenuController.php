@@ -13,7 +13,7 @@ class MenuController extends Controller
         $menu = Menu::all();
         return view('Menu.index', compact('menu'));
     }
-        
+
     public function create()
     {
         return view('Menu.create');
@@ -49,7 +49,7 @@ class MenuController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'harga' => 'required|numeric',  
+            'harga' => 'required|numeric',
         ]);
 
         $menu->nama = $request->nama;
@@ -75,5 +75,5 @@ class MenuController extends Controller
 
         return redirect()->Route('menu.index')->with('Success', 'Delete Menu Success');
     }
-    
+
 }

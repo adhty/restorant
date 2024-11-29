@@ -28,8 +28,8 @@ Route::middleware('auth')->group(function () {
     Route::get('menu', [MenuController::class, 'index'])->name('menu.index');
     Route::get('create', [MenuController::class, 'create'])->name('create.index');
     Route::post('menu', [MenuController::class, 'store'])->name('menu.store');
-    Route::get('menu/{Menu}/edit', [MenuController::class, 'edit'])->name('menu.edit');
-    Route::put('menu/{menu}', action: [MenuController::class, 'update'])->name('menu.update');
+    Route::get('menu/{menu}/edit', [MenuController::class, 'edit'])->name('menu.edit');
+    Route::put('menu/{menu}', [MenuController::class, 'update'])->name('menu.update');
     Route::delete('menu/{menu}', [MenuController::class, 'destroy'])->name('menu.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,4 +38,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
- 

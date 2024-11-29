@@ -1,5 +1,4 @@
 <section class="space-y-6">
-    <!-- @dd($menu) -->
     <x-danger-button
         x-data=""
         x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
